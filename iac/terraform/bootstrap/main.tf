@@ -15,7 +15,7 @@ provider "aws" {
 
 # S3 bucket for storing state file
 resource "aws_s3_bucket" "this" {
-  bucket = "${var.backend_name}-bucket"
+  bucket = "usdn-${var.backend_name}-bucket"
 
   lifecycle {
     prevent_destroy = true
